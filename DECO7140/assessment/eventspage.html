@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listings</title>
+    <link rel="stylesheet" href="./css/css_reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/eventpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="gridcontainer">
+      <header>
+        <!-- Navigation Bar -->
+        <div id="flexnavbar">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="./images/P01_1_logo.jpg" alt="Unbound Logo" />
+          </div>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="eventspage.html">Events</a>
+            <a href="artistblogs.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+          </nav>
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." />
+            <img
+              src="./images/search-interface-symbol.png"
+              alt="Search button"
+            />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="event-header">
+          <h1>Events Calendar</h1>
+
+          <div class="filters">
+            <div class="dropdown">
+              <label for="date-filter">Dates</label>
+              <select id="date-filter">
+                <option value="all">All Dates</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </div>
+
+            <div class="dropdown">
+              <label for="category-filter">Category</label>
+              <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="art">Art</option>
+                <option value="photography">Photography</option>
+                <option value="workshop">Workshop</option>
+              </select>
+            </div>
+
+            <button id="saved-events-btn">View Saved Events</button>
+          </div>
+
+          <div class="calendar-toggle">
+            <button id="list-view">List</button>
+            <button id="calendar-view">Calendar</button>
+          </div>
+
+          <!-- Creating event list -->
+          <div id="event-container">
+            <!-- Event cards will be displayed from here by JavaScript -->
+          </div>
+          <div class="events-btn">
+            <button id="load-more" style="display: none">Load More</button>
+            <button id="back-to-top">Back to top</button>
+          </div>
+        </div>
+        <!-- Creating a form -->
+        <div class="eventForm">
+          <h1>Register your Event with us!</h1>
+          <p>Please fill the form below</p>
+          <form id="eventFormList">
+            <!-- Event Name -->
+            <label for="event_name">Event Name:</label>
+            <input
+              type="text"
+              id="event_name"
+              name="event_name"
+              placeholder="Enter the name of the event"
+              required
+            />
+
+            <!-- Location of the Event -->
+            <label for="location">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter the location of the event"
+              required
+            />
+
+            <!-- Organiser -->
+            <label for="organiser">Organiser:</label>
+            <input
+              type="text"
+              id="organiser"
+              name="organiser"
+              placeholder="The event's organiser e.g., xyz creators"
+              maxlength="50"
+              required
+            />
+
+            <!-- Email -->
+            <label for="event-type">Event Type:</label>
+            <input type="string" id="event_type" name="event_type" required />
+
+            <!-- Event Description -->
+            <label for="description">Event Description:</label>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              placeholder="Write a short description of the event"
+              maxlength="150"
+              required
+            />
+
+            <!-- Event date & time-->
+            <label for="date_time">Select Date & Time:</label>
+            <input
+              type="datetime-local"
+              id="date_time"
+              name="date_time"
+              required
+            />
+
+            <!-- Event Image -->
+            <label for="eventPhoto">Event Photo (Optional, 10MB):</label>
+            <input
+              type="file"
+              id="eventPhoto"
+              name="eventPhoto"
+              accept="image/*"
+            />
+            <small>*Accepted formats: JPG, PNG, GIF, Max size: 10MB.</small>
+
+            <!-- Package Information -->
+            <label>Select the Event Package</label>
+
+            <!-- Radio buttons are used when we need to pick a single option -->
+            <!-- Adding Radio buttons -->
+            <div class="radiogroup">
+              <div class="option">
+                <label
+                  ><input
+                    type="radio"
+                    name="Package"
+                    value="Member"
+                    required
+                  />Member Package</label
+                ><span>$60.00</span>
+              </div>
+              <div class="option">
+                <label
+                  ><input
+                    type="radio"
+                    name="Package"
+                    value="Educator"
+                    required
+                  />
+                  Educator Package</label
+                ><span>$40.00</span>
+              </div>
+              <div class="option">
+                <label
+                  ><input
+                    type="radio"
+                    name="Package"
+                    value="Student"
+                    required
+                  />Student Package</label
+                ><span>$20.00</span>
+              </div>
+            </div>
+            <div class="submit-btn">
+              <button type="submit">Submit</button>
+              <button type="cancel" id="cancel-form">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <!-- Footer Code -->
+      <footer>
+        <p>© 2024 Divya Rastogi</p>
+        <ul class="social-media">
+          <li>
+            <a
+              ><img
+                class="social-logo"
+                src="./images/facebook.png"
+              />Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              ><img
+                class="social-logo"
+                src="./images/instagram.png"
+              />Instagram</a
+            >
+          </li>
+          <li>
+            <a><img class="social-logo" src="./images/mail.png" />E-mail</a>
+          </li>
+          <li>
+            <a><img class="social-logo" src="./images/vimeo.png" />Vimeo</a>
+          </li>
+        </ul>
+        <!-- <p>&copy; 2024 Divya Rastogi. All rights reserved.</p> -->
+      </footer>
+    </div>
+    <script type="module" src="./js/form_component.js" defer></script>
+  </body>
+</html>

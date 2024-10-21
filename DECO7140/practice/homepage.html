@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , intial scale="1.0" />
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="./css/css_reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Art Gallery</h1>
+      <nav class="navbar" id="flexnavbar">
+        <a href="https://www.google.com/" class="mt-1">Home</a>
+        <a href="/practice/aboutus.html" class="mt-1">About Us</a>
+        <a href="https://www.google.com/" class="mt-1">News</a>
+        <a href="https://www.google.com/" class="mt-1">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <div>
+        <h2>Hive</h2>
+        <div>
+          Votes:
+          <span id="voteValue">0</span>
+          <button id="voteBtn" class="btn btn-third">UpVote</button>
+        </div>
+      </div>
+      <div>
+        <h2>Hive</h2>
+        <div>
+          Votes:
+          <span id="voteValuedown">0</span>
+          <button id="voteBtndown" class="btn btn-first">DownVote</button>
+        </div>
+      </div>
+      <h2>Artists:</h2>
+      <p>
+        An artist is a person engaged in an activity related to creating art,
+        practicing the arts, or demonstrating an art. <br />
+        The common usage in both everyday speech and academic discourse refers
+        to a practitioner in the visual arts only.The common usage in both
+        everyday speech and academic discourse refers to a practitioner in the
+        visual arts only. <br />
+        The common usage in both everyday speech and academic discourse refers
+        to a practitioner in the visual arts only.
+      </p>
+      <p>
+        The Mexican artist
+        <abbr title="Frida Kahlo"><span style="color: red">FK</span></abbr>
+        known for her many portraits, self-portraits, and works inspired by the
+        nature and artifacts of Mexico.
+      </p>
+      <table>
+        <tr>
+          <td>
+            <div>
+              <a href="https://www.britannica.com/biography/Frida-Kahlo`">
+                <img src="./Images/1.jpg" alt="Frida 1" ; height="300px" />
+              </a>
+            </div>
+          </td>
+          <td>
+            <div>
+              <a
+                href="https://www.bbc.com/culture/article/20171204-frida-kahlo-and-diego-rivera-portrait-of-a-complex-marriage"
+              >
+                <img src="./Images/2.jpg" alt="Frida 2" ; height="300px" />
+              </a>
+            </div>
+          </td>
+          <td>
+            <div>
+              <a
+                href="https://www.amazon.com.au/Frida-Kahlo-Masterpieces-BEECROFT-JULIAN/dp/1786644827"
+              >
+                <img src="./Images/3.jpeg" alt="Frida 3" ; height="300px" />
+              </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Info</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Project</td>
+              <td>The Hive</td>
+            </tr>
+            <tr>
+              <td>When</td>
+              <td>2021/2022 Summer Course</td>
+            </tr>
+            <tr>
+              <td>Where</td>
+              <td>The University of Queensland, St Lucia</td>
+            </tr>
+            <tr>
+              <td>Who</td>
+              <td>Jac, Cherrie, Rose</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <button class="btn-first">Submit</button>
+      </div>
+      <br />
+      <div>
+        <button class="btn-second">Retry</button>
+      </div>
+      <br />
+      <div>
+        <button class="btn-third">Help</button>
+      </div>
+      <div class="card">
+        <div class="card content">
+          <h2 class="card title mb-1">Ask us about the paintings</h2>
+          <p class="card-text">
+            We'd really like to inform you about the available options
+          </p>
+
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="comment">Your comment:</label>
+              <textarea id="comment" id="comment" rows="4" required></textarea>
+            </div>
+          </form>
+          <button type="submit" class="btn-first mt-1 float-right">
+            Ask Us
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

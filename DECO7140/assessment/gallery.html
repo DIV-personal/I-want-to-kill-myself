@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unbound Gallery</title>
+    <link rel="stylesheet" href="./css/css_reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="gridcontainer">
+      <header>
+        <!-- Navigation Bar -->
+        <div id="flexnavbar">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="./images/P01_1_logo.jpg" alt="Unbound Logo" />
+          </div>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="eventspage.html">Events</a>
+            <a href="artistblogs.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+          </nav>
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." />
+            <img
+              src="./images/search-interface-symbol.png"
+              alt="Search button"
+            />
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Gallery Section -->
+        <section class="gallery">
+          <h1>Gallery</h1>
+          <div class="search-box-gallery">
+            <input
+              type="text"
+              placeholder="Search by art, artist, themes, style, tags, etc"
+            />
+            <button type="submit" id="gallery-btn">
+              <img src="./images/search-interface-symbol.png" alt="Search" />
+            </button>
+          </div>
+
+          <!-- Artist 1 -->
+          <div class="artist-section">
+            <h2>IRIS VAN HERPEN</h2>
+            <div class="artist-gallery">
+              <img src="./images/gallery1.01.jpg" alt="Artwork 1" />
+              <img src="./images/gallery1.02.webp" alt="Artwork 2" />
+              <img src="./images/gallery1.03.jpg" alt="Artwork 3" />
+            </div>
+            <!-- Add blog details here -->
+            <!-- Notes: Edit all alt texts -->
+          </div>
+
+          <!-- Artist 2 -->
+          <div class="artist-section">
+            <h2>DRAG EXPRESSIONS by Ian Osterwalder</h2>
+            <div class="artist-gallery">
+              <img src="./images/gallery2.01.jpg" alt="Artwork 1" />
+              <img src="./images/gallery2.02.jpg" alt="Artwork 2" />
+              <img src="./images/gallery.2.03.jpg" alt="Artwork 3" />
+            </div>
+            <!-- Add blog details here -->
+            <!-- Notes: Edit all alt texts -->
+          </div>
+
+          <!-- Artist 3 -->
+          <div class="artist-section">
+            <h2>Radical Textiles</h2>
+            <div class="artist-gallery">
+              <img src="./images/gallery3.01.jpg" alt="Artwork 1" />
+              <img src="./images/gallery3.02.jpg" alt="Artwork 2" />
+              <img src="./images/gallery3.03.jpg" alt="Artwork 3" />
+            </div>
+          </div>
+
+          <!-- Load More button -->
+          <div class="gallery-btn">
+            <button id="load-more">Load More</button>
+            <button id="back-to-top">Back to top</button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2024 Divya Rastogi. All rights reserved.</p>
+      </footer>
+    </div>
+    <script type="module" src="./js/gallery.js" defer></script>
+  </body>
+</html>

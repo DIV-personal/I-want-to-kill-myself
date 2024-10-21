@@ -1,0 +1,85 @@
+/*
+   website font family
+*/
+
+:root {
+  --primary: #f4b5e3;
+  --secondary: #910000;
+  --third: #054e00;
+  --four: rgb(170, 170, 170);
+  --five: rgb(2, 165, 2);
+  --six: rgb(149, 149, 149);
+}
+
+body {
+  font-family: "Edu Australia VIC WA NT Hand", "Arial", sans-serif;
+  font-size: 100%;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--secondary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 450;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 450;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--third);
+}
+
+/* This is a helper class
+*/
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.float-right {
+  float: right;
+}
+
+/* 
+adjusting for borders, padding etc
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

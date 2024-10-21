@@ -1,0 +1,237 @@
+/* ------------------------------------------------------------------------ */
+/* Navigation Bar */
+#flexnavbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  position: fixed;
+  width: 97%;
+  z-index: 1000;
+}
+
+#flexnavbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%; /* This centers the border ( (100% - 80%) / 2 = 10% ) */
+  width: 80%; /* The length of the border */
+  height: 2px; /* The thickness of the border */
+  background-color: #000; /* Color of the border */
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+}
+
+nav > a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  padding: 2rem 2rem;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Logo */
+
+.logo img {
+  width: 100px;
+  margin-left: 1rem;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Logo */
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+
+.searchbar input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+  color: gray;
+}
+
+.searchbar input::placeholder {
+  color: lightgray;
+}
+
+.searchbar img {
+  width: 16px;
+  height: 16px;
+  margin-left: 40px;
+  filter: grayscale(100%);
+}
+
+/* ------------------------------------------------------------------------ */
+/* Button */
+
+button {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #626262;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Grid container */
+
+#gridcontainer {
+  display: grid; /*turn this element into a grid container */
+  height: 100vh; /*make the grid container take up 100%of the window height*/
+
+  /*define the grid structure, and content of cells*/
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "foot foot foot";
+
+  grid-template-columns: 1fr 1fr 1fr; /*set the column widths*/
+  grid-template-rows: auto auto 1fr auto; /*set the row height*/
+}
+
+header {
+  grid-area: header; /* attach this element to the grid area named header */
+}
+
+#flexnavbar {
+  grid-area: nav; /*attach this element to the grid area named nav*/
+}
+
+main {
+  grid-area: main;
+  margin-top: 180px;
+}
+
+footer {
+  grid-area: foot; /* attach the element to the grid area named foot */
+}
+
+body {
+  font-family: "Gloock", "Arial", sans-serif;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer */
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-logo {
+  height: 30px;
+}
+
+.social-media li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Media Query */
+
+@media screen and (max-width: 600px) {
+  #flexnavbar {
+    padding: 1rem;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav > a {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .searchbar input {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .searchbar img {
+    margin-left: 20px;
+  }
+
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-date {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .event-info {
+    padding-left: 0;
+  }
+
+  .search-box-gallery {
+    width: 100%;
+  }
+
+  .search-box-gallery input {
+    font-size: 14px;
+    padding: 10px 40px 10px 10px;
+  }
+
+  .search-box-gallery button {
+    right: 5px;
+  }
+
+  .search-box-gallery button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}

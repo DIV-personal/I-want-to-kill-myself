@@ -1,0 +1,41 @@
+#flexnavbar {
+  justify-content: flex-end; /*justify all items to the end*/
+  padding: 5px;
+}
+
+#flexnavbar > a {
+  flex: none;
+  padding: 3px 10px 3px 10px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+#gridcontainer {
+  /*define the grid structure, and content of cells*/
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "foot foot foot"
+    "nav nav nav";
+
+  grid-template-columns: 1fr 1fr 1fr; /*set the column widths*/
+  grid-template-rows: auto auto 1fr auto; /*set the row height*/
+}
+
+.logo img {
+  flex-direction: column;
+}
+
+.searchbar {
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.searchbar input {
+  font-size: 16px;
+  text-align: left;
+}
+
+.searchbar img {
+  margin-top: 10px;
+}

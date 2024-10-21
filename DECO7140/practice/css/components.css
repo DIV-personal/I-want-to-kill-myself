@@ -1,0 +1,146 @@
+/* button design
+*/
+
+button {
+  padding: 10px 20px;
+  border: solid 1px red;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-first {
+  background-color: var(--six);
+}
+
+.btn-first:hover {
+  background-color: var(--secondary);
+}
+
+.btn-second {
+  background-color: var(--primary);
+}
+
+.btn-second:hover {
+  background-color: var(--secondary);
+}
+
+.btn-third {
+  background-color: var(--five);
+}
+
+.btn-third:hover {
+  background-color: var(--secondary);
+}
+
+/*card design
+*/
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--six);
+}
+
+.card-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* form component - task sheet
+*/
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*
+navbar
+*/
+
+.navbar {
+  background-color: var(--primary);
+  margin-left: -1%;
+  margin-right: -1%;
+  margin-bottom: -1%;
+  padding: 1%;
+  margin-top: 2%;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: background-color 0.5s;
+}
+
+.navbar a:hover {
+  background-color: var(--secondary);
+}
+
+/*  table design for web dev ninja  */
+
+table {
+  background-color: white;
+  width: 50%;
+  border-bottom: 2px solid teal;
+  text-align: left;
+}
+
+tr:nth-child(2n) {
+  border-bottom: 1px solid rgb(99, 237, 255);
+  border-top: 1px solid rgb(99, 237, 255);
+  background-color: rgb(235, 234, 234);
+}
+
+th {
+  background-color: rgb(4, 125, 125);
+  color: white;
+}
+
+tbody tr:hover {
+  font-weight: bold;
+  color: rgb(62, 202, 202);
+}
+
+th,
+td {
+  padding: 10px;
+}

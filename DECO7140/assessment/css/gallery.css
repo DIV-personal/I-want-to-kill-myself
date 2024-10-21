@@ -1,0 +1,101 @@
+/* ------------------------------------------------------------------------ */
+/* Gallery design */
+
+.gallery {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery h1 {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+.search-box-gallery {
+  position: relative;
+  width: 800px;
+}
+
+.search-box-gallery input {
+  width: 100%;
+  padding: 10px 50px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#gallery-btn {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-box-gallery img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%);
+}
+
+/* ------------------------------------------------------------------------ */
+/* .search-box-gallery button  */
+
+.artist-section {
+  margin-bottom: 40px;
+}
+
+.artist-section h2 {
+  margin-bottom: 10px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.artist-gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.artwork-card {
+  position: relative;
+  width: 32%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.artist-gallery img {
+  width: 32%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 1rem;
+  border: solid 1px black;
+}
+
+.artist-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+/* ------------------------------------------------------------------------ */
+/* Gallery Button */
+
+.gallery-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Hover effect for gallery items */
